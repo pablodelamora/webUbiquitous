@@ -1,0 +1,8 @@
+CREATE TABLE `Vehiculos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tag` varchar(100) NOT NULL,
+  `placas` varchar(40) NOT NULL,
+  `punto_entrada` varchar(100) NOT NULL,
+  `hora_ingreso` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;

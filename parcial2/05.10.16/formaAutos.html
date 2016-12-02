@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  
+  <body>
+
+<!---
+ESTO DEBE IR EN INSERTAR.php 
+    <?php
+      include_once('config.php');
+      if(isset=$_GET['submit'];
+      $tag = $_GET['tag'];
+      
+      if(empty($tag)){
+      {
+         print "El campo tag no puede estar vac&iacute;o";
+      }
+      
+      print "<a href='javascript:self.history.back();'>Regresar</a>";
+      echo
+      {else
+         $result=mysqli_query($mysqli, "INSERT INTO Vehiculos(tag, placas, punto_entrada)" VALUES($tag', '$placas', '$punto_entrada')");
+        
+         echo "Refistro insertado exitosamente";
+         echo "<a href=\ index.php>Inicio</a>;
+       }
+     }
+          
+    ?>-->
+
+
+    <form id="registro">
+    <h1><Registro de veh&iacute;culos</h1>
+     <fieldset>
+    <div>
+      <label>Tag
+        <input id="tag" name="tag" type="text">
+      </label>
+    </div>
+
+    <div>
+      <label>Placas
+        <input id="placas" name="placas" type="text">
+      </label>
+    </div>
+
+    <div>
+      <label>Punto de entrada
+        <input id="punto_entrada" name="punto_entrada" type="text">
+      </label>
+    </div>
+
+    <div>
+      <button type=submit>Submit</button>
+    </div>
+   </fieldset>
+
+   <div>
+      <button><a href='javascript:self.history.back();'>Regresar</a></button>
+    </div>
+    
+  </body>
+</html>

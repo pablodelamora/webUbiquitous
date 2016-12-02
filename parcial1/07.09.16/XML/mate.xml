@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../XSL/mate.xsl"?>
+
+<catalog>
+ <item id="0001">
+  <maker>Los anillos finos S.A. de C.V.</maker>
+  <description>La mejor tienda de la ciudad, precios en USD</description>
+  <size>L</size>
+  <price>120</price>
+  <currency>USD</currency>
+ </item>
+</catalog>

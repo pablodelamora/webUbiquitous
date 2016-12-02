@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding='utf-8'?>
+<?xml-stylesheet type="text/css" href="css/estilo1.css"?>
+
+<Alumnos>
+  <alumno>
+    <nombre>Pablo</nombre>
+    <apellidoP>de la Mora</apellidoP>
+    <apellidoM>Vega</apellidoM>
+  </alumno>
+</Alumnos>

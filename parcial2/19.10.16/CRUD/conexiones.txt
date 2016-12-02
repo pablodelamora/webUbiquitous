@@ -1,0 +1,39 @@
+// PDO
+$pdo = new PDO("mysql:host=localhost;dbname=database", 'username', 'password');
+ 
+// mysqli, forma procedimental
+$mysqli = mysqli_connect('localhost','username','password','database');
+ 
+// mysqli, forma orientada a objetos
+$mysqli = new mysqli('localhost','username','password','database');
+
+// parte de seguridad
+$_GET['username'] = "'; DELETE FROM usuarios; /*"
+
+
+// PDO, escapando de forma "manual"
+// PDO::quote no sóescapa el string, tambien lo pero tambiéentrecomilla.
+$username = PDO::quote($_GET['username']);
+ 
+$pdo->query("SELECT * FROM usuarios WHERE username = $username");
+         
+
+// mysqli, escapando de forma "manual" 
+// mysqli_real_escape_string escapa el string
+$username = mysqli_real_escape_string($_GET['username']);
+ 
+$mysqli->query("SELECT * FROM usuarios WHERE username = '$username'");
+
+// consultas
+// PDO, defincióe consultas
+$pdo->prepare('SELECT * FROM usuarios WHERE username = :username');
+$pdo->execute(array(':username' => $_GET['username']));
+ 
+// mysqli, defincióe consultas
+$query = $mysqli->prepare('SELECT * FROM usuarios WHERE username = ?');
+$query->bind_param('s', $_GET['username']);
+$query->execute();
+ 
+// podríos haber definido la consulta de esta forma... 
+"INSERT INTO usuarios (nombre, apellidos, email) VALUES (?, ?, ?)"
+

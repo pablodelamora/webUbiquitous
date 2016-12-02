@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <!--
+  Esta pagina recibe los datos que van a alterar la tabla por medio de un input
+  -->
+    <title>Registro de Vehiculos</title>
+</head>
+<body>
+    <a href="index.php">Inicio</a>
+    <br/><br/>
+    <form action="inserta.php" method="get" name="forma1">
+        <table width="25%" border="0">
+            <tr>
+                <td>Tag</td>
+                <td><input type="text" name="tag"></td>
+            </tr>
+            <tr>
+                <td>Placas</td>
+                <td><input type="text" name="placas"></td>
+            </tr>
+            <tr>
+                <td>Lugar de ingreso</td>
+                <td><input type="text" name="punto_entrada"></td>
+            </tr>
+            <tr>
+                <td>Tipo de auto</td>
+                <td><input type="text" name="tipo"></td>
+            </tr>
+            <tr>
+                <td>Duracion del trayecto en kilometros</td>
+                <td><input type="text" name="duracion"></td>
+            </tr>
+            <tr>
+                <td>Lugar de salida</td>
+                <td><input type="text" name="punto_salida"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="Submit" value="Registrar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

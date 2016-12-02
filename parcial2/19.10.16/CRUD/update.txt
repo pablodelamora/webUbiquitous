@@ -1,0 +1,19 @@
+<?php
+// Creamos conexion
+$conn = new mysqli("localhost", "usuario", "password", "BD");
+// Validamos la conexion
+if ($conn->connect_error) {
+    die("Conexion fallida: " . $conn->connect_error);
+} 
+// hacemos el query
+$sql = "UPDATE usuarios SET apellidos='Lí' WHERE id=2";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Registro actualizado exitosamenet";
+} else {
+    echo "Error al intentar actualizar registro: " . $conn->error;
+}
+
+$conn->close();
+?>
+

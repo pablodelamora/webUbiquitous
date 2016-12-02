@@ -1,0 +1,22 @@
+
+Alumnos
+{
+  background-color:Teal;
+}
+
+alumno
+{
+  display:block;
+  background-color:silver;
+  width:48%;
+
+  top:9;
+  margin:19px;  left:11;
+}
+
+nombre
+{
+  display:plug;
+  background-color:red;
+  font-size:medium;
+}

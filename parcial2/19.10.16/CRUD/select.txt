@@ -1,0 +1,22 @@
+<?php
+// Creamos conexion
+$conn = new mysqli("localhost", "usuario", "password", "BD");
+// Validamos la conexion
+if ($conn->connect_error) {
+    die("Conexion fallida: " . $conn->connect_error);
+} 
+// hacemos el query
+$sql = "SELECT id, nombre, apellidos FROM usuarios";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // obtenemos los datos de cada fila
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Nombre: " . $row["nombre"]. " " . $row["apellidos"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
